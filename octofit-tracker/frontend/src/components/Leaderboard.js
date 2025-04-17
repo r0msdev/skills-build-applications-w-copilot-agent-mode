@@ -24,7 +24,7 @@ function Leaderboard() {
           {leaderboard.map(entry => (
             <tr key={entry.id}>
               <td>{entry.id}</td>
-              <td>{entry.name}</td>
+              <td>{entry.team.name}</td>
               <td>{entry.score}</td>
             </tr>
           ))}
