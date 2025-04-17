@@ -21,13 +21,14 @@ from . import views
 
 # Define API root and routers
 router = DefaultRouter()
-router.register(r'users', views.UserViewSet, basename='user')
-router.register(r'teams', views.TeamViewSet, basename='team')
-router.register(r'activity', views.ActivityViewSet, basename='activity')
-router.register(r'leaderboard', views.LeaderboardViewSet, basename='leaderboard')
-router.register(r'workouts', views.WorkoutViewSet, basename='workout')
+router.register(r'api/users', views.UserViewSet)
+router.register(r'api/teams', views.TeamViewSet)
+router.register(r'api/activities', views.ActivityViewSet)
+router.register(r'api/leaderboard', views.LeaderboardViewSet)
+router.register(r'api/workouts', views.WorkoutViewSet)
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
+    path('', views.api_root, name='api-root'),  # Set api_root as the root view
+    path('admin/', admin.site.urls),
     path('', include(router.urls)),
 ]

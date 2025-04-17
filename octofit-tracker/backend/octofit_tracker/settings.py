@@ -25,7 +25,10 @@ SECRET_KEY = "django-insecure-u@^t=i8=94h29ev05obq_d7j*oifmazmsxc^^5=otnc#%9qysn
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [
+    "curly-memory-94p59wxvwg29754-8000.app.github.dev",
+    "localhost",
+]
 
 
 # Application definition
@@ -126,3 +129,8 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+CORS_ALLOWED_ORIGINS = [
+    "https://curly-memory-94p59wxvwg29754-8000.app.github.dev",
+    "http://localhost:8000",
+]
