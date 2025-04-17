@@ -131,6 +131,7 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CORS_ALLOWED_ORIGINS = [
+    "https://curly-memory-94p59wxvwg29754-3000.app.github.dev",
     "https://curly-memory-94p59wxvwg29754-8000.app.github.dev",
     "http://localhost:8000",
 ]
